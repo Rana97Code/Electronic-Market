@@ -93,5 +93,31 @@ label.logo{
     box-sizing: border-box;
     border: 2px solid black;
     border-radius: 20px;
+    
         
+}
+.pich{
+    width: 40px;
+    border-radius: 3px;
+}
+.details{
+    margin-left: 80px;
+}
+.cart {
+    float: right;
+    width: 160px;
+    background: tomato;
+    border-radius: 5px;
+    color: white;
+}
+.Pay-box {
+    display: none;
+    width: 500px;
+    height: auto;
+    text-align: center;
+    background-color: cyan;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 20px;
+
 }

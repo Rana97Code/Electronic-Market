@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,92 +8,121 @@
     <title>My Shop</title>
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 </head>
-<body>
 
-    <div id="head" class="Head">
- 
-        <div class="nav">
-            <label class="logo">Shop-X</label>
-            <ul>
-                <li><a id="mobile" class="active" href="#">Mobile</a></li>
-                <li><a href="#">Television</a></li>
-                <li><a href="#">Refrigertor</a></li>
-                <li><a href="#">accessories</a></li>
-            </ul>
-            <label id="icon"><i class ="fas fa-bars"></i></label>
+<body>
+    <div id="buyProduct" class="buyProduct">
+        <div id="head" class="Head">
+
+            <div class="nav">
+                <label class="logo">Shop-X</label>
+                <ul>
+                    <li><a id="mobile" class="active" href="#">Mobile</a></li>
+                    <li><a href="#">Television</a></li>
+                    <li><a href="#">Refrigertor</a></li>
+                    <li><a href="#">accessories</a></li>
+                </ul>
+                <label id="icon"><i class="fas fa-bars"></i></label>
+            </div>
+
+            <div class="body">
+                <img src="image/ZORA27.jpg" alt="">
+            </div>
+
         </div>
-    
-        <div class="body">
-            <img src="image/ZORA27.jpg" alt="">
+        <div id="mobile-area" class="mobile-area">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Sumsung</h3>
+                    <h4>Avilable</h4>
+                    <img src="image/gsmarena_001.jpg">
+                    <h3 id="totalPrice">$2321</h3>
+                    <button id="minusPhone1"><i class="fa fa-minus"></i></button>
+                    <input type="text" id="numberofPhone1" class="text-center pich" value="1">
+                    <button id="plusPhone1"><i class="fa fa-plus"></i></button>
+                    <a href="#" class="details"> Details <i class="fa fa-chevron-circle-down"></i></a>
+                    <button id ="CartBtn1" class="cart" type="submit"><i class="fa fa-cart-arrow-down"></i> Add To Cart</button>
+                </div>
+                <div class="col-md-4">
+                    <h3>Apple</h3>
+                    <h4>Avilable</h4>
+                    <img src="image/gsmarena_004.jpg" alt="">
+                    <h3 id="Phone2totalPrice">$1321</h3>
+                    <button onclick="handleproductChange2('Phone2',false)"><i class="fa fa-minus"></i></button>
+                    <input type="text" id="Phone2numberof" class="text-center pich" value="1">
+                    <button onclick="handleproductChange2('Phone2',true)"><i class="fa fa-plus"></i></button>
+                    <a href="#" class="details"> Details <i class="fa fa-chevron-circle-down"></i></a>
+                    <button id ="CartBtn2" class="cart" type="submit"><i class="fa fa-cart-arrow-down"></i> Add To Cart</button>
+                </div>
+                <div class="col-md-4">
+                    <h3>OnePlus</h3>
+                    <h4>Avilable</h4>
+                    <img src="image/header-thumb7.jpg" alt="">
+                    <h3 id="Phone3totalPrice">$232</h3>
+                    <button onclick="handleproductChange2('Phone3',false)"><i class="fa fa-minus"></i></button>
+                    <input type="text" id="Phone3numberof" class="text-center pich" value="1">
+                    <button onclick="handleproductChange2('Phone3',true)"><i class="fa fa-plus"></i></button>
+                    <a href="#" class="details"> Details <i class="fa fa-chevron-circle-down"></i></a>
+                    <button id ="CartBtn3" class="cart" type="submit"><i class="fa fa-cart-arrow-down"></i> Add To Cart</button>
+                </div>
+            </div>
         </div>
-            
     </div>
-    <div id="mobile-area" class="mobile-area">
-        <div class="row">
-            <div class="col-md-4">
-                <h3>Sumsund</h3>
-                <h4></h4>
-                <img src="image/gsmarena_001.jpg">
-                <h3 id="totalPrice">$2321</h3>
-                <a href="#">Details</a>
-                <button id="minusPhone1"><i class="fa fa-minus"></i></button>
-                <input type="text" id="numberofPhone1" class="text-center" value="1">
-                <button id="plusPhone1"><i class="fa fa-plus"></i></button>
-            </div>
-            <div class="col-md-4">
-                <h3>Apple</h3>
-                <h4></h4>
-                <img src="image/gsmarena_004.jpg" alt="">
-                <h3>$1321</h3>
-                <a href="#">Details</a>
-                <button id="minusPhone"><i class="fa fa-minus"></i></button>
-                <input type="text" id="numberofPhone" class="text-center" value="1">
-                <button id="plusPhone"><i class="fa fa-plus"></i></button>
-            </div>
-            <div class="col-md-4">
-                <h3>OnePlus</h3>
-                <h4></h4>
-                <img src="image/header-thumb7.jpg" alt="">
-                <h3>$232s</h3>
-                <a href="#">Details</a>
-                <button id="minusPhone"><i class="fa fa-minus"></i></button> 
-                <input type="text" id="numberofPhone" class="text-center" value="1">
-                <button id="plusPhone"><i class="fa fa-plus"></i></button>
-            </div>
-        </div>
+
+
+    <!-- Total Cart -->
+    <div id= "Pay-box" class="Pay-box">
+        <h2>Payment & Confirm Your <i class="fa fa-truck" ></i> Shipping</h2>
+        <h2>Total Amount</h2>
+        <h3 id="finalAmount">$0</h3>
+        <button><i class="fa fa-plus"></i> VAT</button>
+        <button>Pay by Card</button>
     </div>
 
 
 
     <script>
-        $(document).ready(function(){
-            $('#icon').click(function(){
+        $(document).ready(function () {
+            $('#icon').click(function () {
                 $('ul').toggleClass('show');
             });
         })
     </script>
     <script>
-               // log-in button event handeler
-               const mobileBtn = document.getElementById("mobile");
-        mobileBtn.addEventListener("click",function(){
-            const headArea= document.getElementById("head");
-            headArea.style.display="none";
+        // log-in button event handeler
+        const mobileBtn = document.getElementById("mobile");
+        mobileBtn.addEventListener("click", function () {
+            const headArea = document.getElementById("head");
+            headArea.style.display = "none";
             const mobileArea = document.getElementById("mobile-area");
-            mobileArea.style.display ="block";
+            mobileArea.style.display = "block";
         })
 
 
-        //    // Plus & Minus event handel 
+        //Cart & buy Section
+        const buyDevice = document.getElementById("CartBtn1");
+        buyDevice.addEventListener("click", function(){
+            const buycart = document.getElementById("buyProduct");
+            buycart.style.display = "none";
+            const cartArea = document.getElementById("Pay-box");
+            cartArea.style.display = "block";
+        })
+
+        //    // Plus & Minus event handel simple rule
         // document.getElementById("minusPhone1").addEventListener('click', function(){
         //     const showContity = document.getElementById("numberofPhone1");
         //     const takeContity = parseInt(showContity.value);
@@ -113,30 +143,100 @@
         // });
 
 
-            //Plus and Minus event handel using function
-        document.getElementById("minusPhone1").addEventListener('click', function(){
+        //Plus and Minus event handel using function for 1st phone (different rules)
+        document.getElementById("minusPhone1").addEventListener('click', function () {
             handleproductChange(false);
         });
-        document.getElementById("plusPhone1").addEventListener('click',function(){ 
+        document.getElementById("plusPhone1").addEventListener('click', function () {
             handleproductChange(true);
-            });
+        });
 
-        function handleproductChange(isIncrease){
+        function handleproductChange(isIncrease) {
             const showContity = document.getElementById("numberofPhone1");
             const takeContity = parseInt(showContity.value);
             // const newContity = takeContity + 1;
             let newContity = takeContity;
-            if(isIncrease == true){
+            if (isIncrease == true) {
                 newContity = takeContity + 1;
             }
-            if(isIncrease == false && takeContity> 0){
+            if (isIncrease == false && takeContity > 0) {
                 newContity = takeContity - 1;
             }
             showContity.value = newContity;
             const totalvalue = 2321 * newContity;
-            document.getElementById('totalPrice').innerText= '$'+ totalvalue;
+            document.getElementById('totalPrice').innerText = '$' + totalvalue;
+
+         
         }
+
+
+        //Plus and Minus event handel using function 2
+        //      document.getElementById("minusPhone2").addEventListener('click', function(){
+        //     handleproductChange2(false);
+        // });
+        // document.getElementById("plusPhone2").addEventListener('click',function(){ 
+        //     handleproductChange2(true);
+        //     });
+
+
+        //    //Plus and Minus event handel using function for 2nd phone (different rules)
+        //         function handleproductChange2(isIncrease){
+        //             const showContity = document.getElementById("numberofPhone2");
+        //             const takeContity = parseInt(showContity.value);
+        //             // const newContity = takeContity + 1;
+        //             let newContity = takeContity;
+        //             if(isIncrease == true){
+        //                 newContity = takeContity + 1;
+        //             }
+        //             if(isIncrease == false && takeContity> 0){
+        //                 newContity = takeContity - 1;
+        //             }
+        //             showContity.value = newContity;
+        //             const totalvalue = 1321 * newContity;
+        //             const totalvalue = 1321 * newContity;
+        //             document.getElementById('totalPrice2').innerText= '$'+ totalvalue;
+
+        //         }
+
+
+
+
+        //Plus and Minus event handel using function for 2nd & 3rd phone (Using oneclick rules)
+        function handleproductChange2(Phone, isIncrease) {
+            const showContity = document.getElementById(Phone + 'numberof');
+            const takeContity = parseInt(showContity.value);
+            // const newContity = takeContity + 1;
+            let newContity = takeContity;
+            if (isIncrease == true) {
+                newContity = takeContity + 1;
+            }
+            if (isIncrease == false && takeContity > 0) {
+                newContity = takeContity - 1;
+            }
+            showContity.value = newContity;
+            let totalval = 0;
+            if (Phone == 'Phone2') {
+                totalval = 1321 * newContity;
+            }
+            if (Phone == 'Phone3') {
+                totalval = 232 * newContity;
+            }
+            document.getElementById(Phone + 'totalPrice').innerText = '$' + totalval;
+
+           
+        }
+
+        //Order confirm and go to payment section
+        
+           document.getElementById("CartBtn1").addEventListener('click', function(){
+            const takeAmount= document.getElementById('totalPrice');
+            const productCount = parseInt(takeAmount.value);
+            document.getElementById('finalAmount').innerText = '$' + productCount;
+           })
+         
+        
 
     </script>
 </body>
+
 </html>
