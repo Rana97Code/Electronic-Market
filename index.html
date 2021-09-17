@@ -47,7 +47,7 @@
                 <a href="#">Details</a>
                 <button id="minusPhone1"><i class="fa fa-minus"></i></button>
                 <input type="text" id="numberofPhone1" class="text-center" value="1">
-                <button id="plusPhone"><i class="fa fa-plus"></i></button>
+                <button id="plusPhone1"><i class="fa fa-plus"></i></button>
             </div>
             <div class="col-md-4">
                 <h3>Apple</h3>
@@ -90,16 +90,52 @@
             const mobileArea = document.getElementById("mobile-area");
             mobileArea.style.display ="block";
         })
- 
+
+
+        //    // Plus & Minus event handel 
+        // document.getElementById("minusPhone1").addEventListener('click', function(){
+        //     const showContity = document.getElementById("numberofPhone1");
+        //     const takeContity = parseInt(showContity.value);
+        //     const newContity = takeContity - 1;
+        //     showContity.value = newContity;
+        //     const totalval = 2321 * newContity;
+        //     document.getElementById('totalPrice').innerText= '$' + totalval;
+        // })
+
+
+        // document.getElementById("plusPhone1").addEventListener('click',function(){ 
+        //     const showContity = document.getElementById("numberofPhone1");
+        //     const takeContity = parseInt(showContity.value);
+        //     const newContity = takeContity + 1;
+        //     showContity.value = newContity;
+        //     const totalvalue = 2321 * newContity;
+        //     document.getElementById('totalPrice').innerText= '$'+ totalvalue;
+        // });
+
+
+            //Plus and Minus event handel using function
         document.getElementById("minusPhone1").addEventListener('click', function(){
+            handleproductChange(false);
+        });
+        document.getElementById("plusPhone1").addEventListener('click',function(){ 
+            handleproductChange(true);
+            });
+
+        function handleproductChange(isIncrease){
             const showContity = document.getElementById("numberofPhone1");
             const takeContity = parseInt(showContity.value);
-            const newContity = takeContity - 1;
+            // const newContity = takeContity + 1;
+            let newContity = takeContity;
+            if(isIncrease == true){
+                newContity = takeContity + 1;
+            }
+            if(isIncrease == false && takeContity> 0){
+                newContity = takeContity - 1;
+            }
             showContity.value = newContity;
-            const totalval = 2321 / newContity;
-            document.getElementById('totalPrice').innerText= totalval;
-    
-        })
+            const totalvalue = 2321 * newContity;
+            document.getElementById('totalPrice').innerText= '$'+ totalvalue;
+        }
 
     </script>
 </body>
